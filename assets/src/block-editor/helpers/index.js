@@ -420,6 +420,10 @@ AmpLayoutControl.propTypes = {
 const AmpNoloadingToggle = ( props ) => {
 	const { attributes: { ampNoLoading }, setAttributes } = props;
 
+	if ( ! ampNoLoading ) {
+		return null;
+	}
+
 	const label = __( 'AMP Noloading', 'amp' );
 
 	return (
